@@ -55,7 +55,7 @@ let cName = "shiva"
 let noun = "Emma watson"
 "When \(cName) saw \(noun),he was like "
 
-//Array
+//Array ordered list
 
 //inferred 
 let cities = ["Bombay","Madras","Delhi"]
@@ -97,7 +97,107 @@ mutable.insert("Goa",atIndex: 1)
 var languages = ["C","C++","Objective-C"]
 languages.append("Swift")
 languages.insert("Javascript", atIndex: 2)
-languages.removeLast()
+let optIndex = find(languages , "Objective-C")
+if let getIndex = optIndex {
+    languages.removeAtIndex(getIndex)
+}
+languages
+
+
+//Dictionaries
+let bandGenres = ["Coldplay": "Alternative Rock", "Metallica": "Heavy Metal", "Pink Floyd": "Psychedelic Rock"]
+
+//explicit
+
+let explicitBandGenres:Dictionary<String , String > = bandGenres
+
+//Empty Dict
+
+let bandempty = Dictionary<String,String>()
+
+let bandName = "Metallia"
+let getGenre = bandGenres[bandName] //returns optinal value check for nil always
+if let awesomeBand = getGenre{
+    println("\(bandName) is a \(getGenre)")
+}
+else{
+    println("i dont know that,are listening to Just beiber ?")
+}
+bandGenres.count
+
+
+//Control Flow
+
+for i in 1..<10 {
+    println("Exclusive \(i)")
+}
+
+for i in 1...10 {
+    println("Inclusive \(i)")
+}
+
+//while
+//do while
+
+//if, else if , else
+
+let teamMember = "shiva"
+switch(teamMember){
+    case "shiva","Anidhya","Beena":
+      println("Developer")
+    case "Sunil","Kalyan":
+      println("Designer")
+    case "Sudeepa","Pradeep":
+      println("Marketing")
+default:
+    println("Content Team")
+    
+}
+
+
+//fizzbuzz
+for i in 1..<50 {
+    if i%3==0{
+        println("Fizz")
+    
+    }
+    else if i % 5 == 0{
+        println("Buzz")
+    }
+    else if (i % 3 == 0) && (i % 5 == 0){
+        println("FizzBuzz")
+    }
+    
+}
+
+
+//Declaring a function
+//syntax
+// func name (param1name: param1type ,..) -> retval type{
+// return expression }
+
+//add numbers
+func addNumbers(x: Int , y: Int) -> (Int) {
+    return x + y
+}
+addNumbers(5 , 1)
+addNumbers(2 , 3)
+
+
+//fn without params/return values
+//func noParams(){...}
+func noParams() -> (){
+    println("Look no params")
+}
+noParams()
+
+
+//external parameter names
+
+
+
+
+
 
 
 
